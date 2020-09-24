@@ -206,6 +206,7 @@ header nav li:hover > a {
   padding-bottom: 1rem;
   font-weight: 800;
   font-size: .6rem;
+  
 }
 
 .about .sub {
@@ -417,6 +418,9 @@ footer small {
     margin: 1rem 0;
     width: 40%;
   }
+
+
+
   .service h4 {
     font-size: 40px !important;
   }
@@ -441,6 +445,9 @@ footer small {
   .service__list p {
     font-size: 15px !important;
   }
+  .about h6{
+  font-size: 15px ! important ;
+  }
   .sub {
     -webkit-box-pack: center !important;
         -ms-flex-pack: center !important;
@@ -452,7 +459,7 @@ footer small {
   }
   .sub p {
     font-size: 20px !important;
-    line-height: 1.2rem !important;
+    line-height: 1.4rem !important;
   }
   .blog {
     -webkit-box-orient: vertical;
