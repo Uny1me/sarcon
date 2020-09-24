@@ -15,7 +15,6 @@
 
 .fas {
   color: #fff !important;
-  font-size: 8px !important;
 }
 
 body, input {
@@ -34,7 +33,7 @@ body #btn, input #btn {
   bottom: 0;
   right: 0;
   margin: .7rem 2rem;
-  padding: .25rem .7rem;
+  padding: .6rem 1rem;
   background: var(--main--blue);
   border: none;
   outline: none;
@@ -61,19 +60,45 @@ body #btn:hover, input #btn:hover {
   display: none;
   position: fixed;
   z-index: 9;
-  height: 100%;
+  height: 100vh;
   top: 0;
   margin: 0 auto;
   background-color: #fff;
 }
 
+@media only screen and (min-width: 768px) {
+  .container .contact {
+    width: 30% !important;
+  }
+  .container .contact__search {
+    padding: .7rem .4rem !important;
+  }
+  .container .contact__search input {
+    width: 60% !important;
+    font-size: 10px !important;
+    padding: .5rem .3rem !important;
+  }
+  .container .chat {
+    width: 70% !important;
+    display: block !important;
+    font-size: 14px !important;
+  }
+  .container .chat__message {
+    height: 65vh !important;
+  }
+  .container .chats {
+    font-size: 12px !important;
+  }
+  .container .chats__details {
+    padding: .6rem .6rem !important;
+  }
+}
+
 .container .contact {
-  width: 30%;
   -webkit-box-shadow: 0 1.9px 10px rgba(0, 0, 0, 0.037), 0 15px 80px rgba(0, 0, 0, 0.07);
           box-shadow: 0 1.9px 10px rgba(0, 0, 0, 0.037), 0 15px 80px rgba(0, 0, 0, 0.07);
-  height: 80vh;
+  height: 100vh;
   background: #fff;
-  z-index: 1;
   -webkit-transition: .3s !important;
   transition: .3s !important;
 }
@@ -93,6 +118,8 @@ body #btn:hover, input #btn:hover {
 
 .container .contact__search input {
   width: 70%;
+  font-size: 16px;
+  padding: .7rem .6rem;
 }
 
 .container .contact .chats {
@@ -102,7 +129,6 @@ body #btn:hover, input #btn:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: .35rem;
   -webkit-box-pack: left;
       -ms-flex-pack: left;
           justify-content: left;
@@ -111,16 +137,8 @@ body #btn:hover, input #btn:hover {
 }
 
 .container .contact .chats img {
-  width: 12%;
-  height: 12%;
-}
-
-.container .contact .chats__details {
-  padding: 0 1rem;
-}
-
-.container .contact .chats__details p {
-  padding: .09rem 0;
+  width: 14%;
+  height: 14%;
 }
 
 .container .online {
@@ -133,7 +151,7 @@ body #btn:hover, input #btn:hover {
 }
 
 .container .chat {
-  width: 70%;
+  height: 100vh;
 }
 
 .container .chat__head {
@@ -162,7 +180,7 @@ body #btn:hover, input #btn:hover {
   -webkit-box-pack: right;
       -ms-flex-pack: right;
           justify-content: right;
-  width: 80%;
+  width: 100%;
 }
 
 .container .chat__head .heads button {
@@ -179,7 +197,6 @@ body #btn:hover, input #btn:hover {
   color: var(--main--blue);
   text-transform: uppercase;
   font-weight: 700;
-  font-size: .6rem;
   margin: 0 1rem;
 }
 
@@ -189,13 +206,13 @@ body #btn:hover, input #btn:hover {
 
 .container .chat__message {
   width: 100%;
-  height: 60vh;
+  height: 75vh;
   overflow-y: scroll;
-  font-size: .35rem;
-  line-height: .6rem;
+  line-height: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  font-size: 16px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -209,7 +226,7 @@ body #btn:hover, input #btn:hover {
 .container .chat__message .send {
   margin: .9rem 2rem;
   border-radius: 10px;
-  width: 35%;
+  width: 45%;
   padding: .35rem 1rem;
   background: var(--box--bg);
 }
@@ -219,7 +236,7 @@ body #btn:hover, input #btn:hover {
       align-self: flex-end;
   margin: .5rem 1rem;
   border-radius: 10px;
-  width: 35%;
+  width: 45%;
   padding: .35rem 1rem;
   background: var(--main--blue);
 }
@@ -242,12 +259,13 @@ body #btn:hover, input #btn:hover {
 
 .container .chat__input input {
   width: 90%;
-  padding: .4rem .3rem;
+  padding: .7rem .6rem;
+  font-size: 15px;
 }
 
 .container .chat__input button {
   margin: 0 .6rem;
-  padding: 8px 10px;
+  padding: 8px 17px;
 }
 
 .container input {
@@ -281,8 +299,9 @@ body #btn:hover, input #btn:hover {
 
 @media only screen and (max-width: 768px) {
   .contact {
-    width: 0% !important;
+    width: 0%;
     position: fixed;
+    z-index: 1;
   }
   .contact__search {
     display: none !important;
@@ -291,18 +310,31 @@ body #btn:hover, input #btn:hover {
     display: none;
   }
   .viewContact {
-    width: 40% !important;
+    width: 60% !important;
     -webkit-transition: .3s;
     transition: .3s;
   }
   .chat {
     width: 100% !important;
   }
+  .chat__message {
+    font-size: 16px;
+    height: 75vh !important;
+  }
+  .chats__details {
+    padding: 1rem 1rem;
+  }
+  .chats__details p {
+    padding: .09rem 0;
+  }
   .heads button {
     visibility: visible !important;
   }
   .heads img {
     margin: 0 2rem;
+  }
+  .heads h2 {
+    font-size: 25px !important;
   }
   .show {
     display: -webkit-box !important;
@@ -315,23 +347,34 @@ body #btn:hover, input #btn:hover {
 }
 
 @media only screen and (max-width: 580px) {
+  .viewContact {
+    width: 80% !important;
+  }
   .heads img {
     margin: 0 1rem !important;
   }
-  .heads h2 {
-    font-size: .3rem !important;
+  .chat__input {
+    padding: .4rem 0 !important;
   }
   .chat__message .send {
-    width: 45% !important;
+    width: 70% !important;
   }
   .chat__message .reply {
-    width: 45% !important;
+    width: 70% !important;
   }
 }
 
 @media only screen and (max-width: 480px) {
   .viewContact {
+    width: 90% !important;
+  }
+  .contact__search input {
     width: 60% !important;
+    font-size: 12px !important;
+    padding: .7rem .4rem !important;
+  }
+  .heads h2 {
+    font-size: 14px !important;
   }
 }
 /*# sourceMappingURL=chat.css.map */
