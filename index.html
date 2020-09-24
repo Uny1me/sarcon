@@ -12,20 +12,20 @@
 </head>
 <body>
 
-    <button id="btn">Chat Now!</button>
+    <button id="btn" class="btn">Chat Now!</button>
     
     <div class="fix">
 
-        <header>    
+        <header class="pad">    
             <nav>
-                <nav-text>
-                    <h2>SARCON</h2>   
-                    <button class="ham">
-                        <i class="fas fa-bars" style="font-size: 13px; color: #fff;"></i>
-                        <i class="fas fa-times" style="font-size: 13px; color: #fff;"></i>
-                    </button>          
-            
-                </nav-text>
+                    <div class="nav-text flex-box">
+                        <h2>SARCON</h2>   
+                        <button class="ham">
+                            <i class="fas fa-bars" style="font-size: 15px; color: #fff;"></i>
+                            <i class="fas fa-times" style="font-size: 15px; color: #fff;"></i>
+                        </button> 
+                    </div>         
+               
                 <ul>
                     <li id="item1"><a href="#services">Services</a> </li>
                     <li id="item2"><a href="#about">About</a> </li>
@@ -37,59 +37,58 @@
         </header>
 
         <section id="home"class="home">
-            <main class="home__inner">
+            <main class="home__inner pad">
                 <p>WE ARE SARCON TECH.</p>
                 <h3>Award Winning <br> virtual & hybrid <br> events platform</h3>
-                <button>Get Started</button>
+                <button class="btn">Get Started</button>
         </main>
         </section>
 
      
-        <section id="services" class="service">
+        <section id="services" class="service pad flex-box">
 
             <h6>SERVICES</h6>
             <h4>What We Offer...</h4>
             <hr>
 
             <div class="service__list">
-                <div class="services">
-                    <span><i class="fas fa-power-off" style="font-size: 8px;"></i></span>
-                    <h5>CONTROL</h5>
+                <div class="services pad">
+                    <span><i class="fas fa-power-off" style="font-size: 25px; color: var(--dark-blue);"></i></span>
+                    <h4>CONTROL</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, qui.</p>
                 </div>
                 <div class="services">
-                    <span><i class="fas fa-image" style="font-size: 8px;"></i></span>
-                    <h5>IMAGE</h5>
+                    <span><i class="fas fa-image" style="font-size: 25px; color: var(--box-bg);"></i></span>
+                    <h4>IMAGE</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, qui.</p>
                 </div>
                 <div class="services">
-                    <span><i class="fas fa-video" style="font-size: 8px;"></i></span>
-                    <h5>VIDEO</h5>
+                    <span><i class="fas fa-video" style="font-size: 25px; color: var(--dark-blue);"></i></span>
+                    <h4>VIDEO</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, qui.</p>
                 </div>
 
             </div>
         </section>
 
-        <section id="about" class="about">
+        <section id="about" class="about flex-box">
             <h6>ABOUT</h6>
-            <div class="sub">
+            <div class="sub flex-box">
                     <img src="./assets/img/about.jpg" alt="">
-
                     <div class="sub__text">
-                    <h6>OUR PASSION FOR EXPERIENCE</h6>
+                    <h3>OUR PASSION FOR EXPERIENCE</h3>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia minima illum cupiditate delectus ut dolor natus aspernatur veritatis. Quae ipsa dolores dignissimos ullam. Tempora eius, officia velit saepe recusandae maxime!</p>
                     </div>
             </div>
         </section>
 
 
-        <section id="blog" class="blog">
+        <section id="blog" class="blog flex-box">
             <div class="blogpost">
                 <h4>Here's what we think</h4>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-        </div>
-            <button>SHOW ME</button>
+            </div>
+            <button class="btn">SHOW ME</button>
         </section>
 
         <footer id="footer">
@@ -97,12 +96,12 @@
 
             <form action="./unknnown.php" method="post">
             <label for="name">Name</label><br>
-            <input type="text" name="name" aria-label="hidden" required> <br>
+            <input type="text" name="name" aria-label="hidden" required><br><br>
             <label for="emaiil">Email Address</label required><br>
-            <input type="email" name="email" aria-label="hidden"><br>
+            <input type="email" name="email" aria-label="hidden"><br><br>
             <label for="Comment">Comments</label><br>
             <textarea name="comments" required></textarea><br>
-            <input type="submit" value="Submit">
+            <input type="submit" value="Submit" class=".btn">
         </form>
         <hr>
         <small>All Rights Reserved. &nbsp; Sarcon Technologies. &copy; 2020
