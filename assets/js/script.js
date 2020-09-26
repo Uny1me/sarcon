@@ -1,5 +1,28 @@
 
+
+
+
+var tab = document.getElementsByClassName('tab');
+var sect = document.getElementsByClassName('sect')
+
+function openSection (tabName) {
+  
+var tab = document.getElementsByClassName('tab');
+
+for (let i = 0; i < sect.length; i++) {
+  sect[i].style.display = 'none';
+}
+
+document.getElementById(tabName).style.display = 'block'
+}
+
+
+
 window.onload = () => {
+
+  
+var container  = document.querySelector('.container')
+
 
     $(document).ready(function () {
 
@@ -11,47 +34,6 @@ window.onload = () => {
         $('.fa-times').toggle('.hide')
       })
 
-      // Highlight Navbar
-
-        $(window).scroll(function () {
-          var Scroll = $(window).scrollTop() + 1,
-          sectionOneOffset = $('#services').offset().top,
-          sectionTwoOffset = $('#about').offset().top,
-          sectionThreeOffset = $('#blog').offset().top;
-          sectionFourOffset = $('#footer').offset().top;
-  
-  
-          if (Scroll >= sectionOneOffset) {
-            $('#item1').addClass('active');
-          }
-          else {
-            $('#item1').removeClass('active');
-          }
-  
-          if (Scroll >= sectionTwoOffset) {
-            $('#item2').addClass('active');
-            $('#item1').removeClass('active');
-          }
-          else {
-            $('#item2').removeClass('active');
-          }
-  
-          if (Scroll >= sectionThreeOffset) {
-            $('#item3').addClass('active');
-            $('#item2').removeClass('active');  
-          }
-          else {
-            $('#item3').removeClass('active');
-          }
-          if (Scroll >= sectionFourOffset) {
-            $('#item4').addClass('active');
-            $('#item3').removeClass('active');  
-          }
-          else {
-            $('#item4').removeClass('active');
-          }
-        
-        })
     })
     
     // AJAX REQUEST FOR DISPLAY
@@ -93,22 +75,29 @@ xhr.send();
 const send = document.getElementById('send');
 const message = document.querySelector('.chat__message');
 const replied = document.getElementById('replied');
+const linkk = document.getElementById('link');
+var ank = document.getElementById('alink')
 
+ alink.addEventListener('click', () => {
+    linkk.classList.toggle('block')
+    replied.classList.toggle('no-show')
+  })
 
 class chat {
 
 constructor(chatText) {
-
     this.createDiv(chatText);
-
 }
 
 createDiv(chatText) {
+
 
     let reply = document.createElement('div');
     reply.classList.add('reply');
 
     let replyText = document.createElement('p');
+
+ 
     replyText.textContent = chatText;
 
     let replyTime = document.createElement('small');
@@ -122,14 +111,52 @@ createDiv(chatText) {
     
     }
 }
+
+
+class link {
+
+  constructor(chatText) {
+      this.createDiv(chatText);
+  }
+  
+  createDiv(chatText) {
+  
+  
+      let reply = document.createElement('div');
+      reply.classList.add('reply');
+  
+      let replyLink = document.createElement('a');
+  
+   
+      replyLink.textContent = chatText;
+      replyLink.href = "https://"+ linkk.value
+      replyLink.target = "_blank"
+  
+      let replyTime = document.createElement('small');
+      const d = new Date();
+      const time = d.getHours() + ':'+ d.getMinutes();
+      replyTime.textContent = time;
+  
+      message.appendChild(reply);
+      reply.appendChild(replyLink);
+      reply.appendChild(replyTime);
+      
+      }
+  }
+
        
     function chatt() {
     if(replied.value !== "") {
     new chat(replied.value)
     replied.value = "" 
     }
+    else if(linkk.value !== "") {
+      new link(linkk.value)
+      linkk.value = "" 
+      }
 }
 
+       
 send.addEventListener('click', chatt);
 
 window.addEventListener('keydown', (e) => {
@@ -197,7 +224,6 @@ search.addEventListener('keyup', ()=> {
 var btn = document.querySelector('body #btn');
 var cancel = document.querySelector('#cancel');
 
-var container  = document.querySelector('.container')
 
 btn.addEventListener('click', () => {
    container.classList.add('show');

@@ -16,7 +16,7 @@
     
     <div class="fix">
 
-        <header class="pad">    
+        <header class="had">    
             <nav>
                     <div class="nav-text flex-box">
                         <h2>SARCON</h2>   
@@ -27,87 +27,84 @@
                     </div>         
                
                 <ul>
-                    <li id="item1"><a href="#services">Services</a> </li>
-                    <li id="item2"><a href="#about">About</a> </li>
-                    <li id="item3"><a href="#blog">Blog</a> </li>
-                    <li id="item4"><a href="#footer">Contact</a> </li>
+                    <li class="tab" onclick="openSection('home')">Home</li>
+                    <li class="tab" onclick="openSection('services')">Services</li>
+                    <li class="tab" onclick="openSection('about')">About</li>
+                    <li class="tab" onclick="openSection('footer')">Contact</li>
                 </ul>
             </nav>
            
         </header>
-
-        <section id="home"class="home">
-            <main class="home__inner pad">
-                <p>WE ARE SARCON TECH.</p>
-                <h3>Award Winning <br> virtual & hybrid <br> events platform</h3>
-                <button class="btn">Get Started</button>
-        </main>
-        </section>
-
-     
-        <section id="services" class="service pad flex-box">
-
-            <h6>SERVICES</h6>
-            <h4>What We Offer...</h4>
-            <hr>
-
-            <div class="service__list">
-                <div class="services pad">
-                    <span><i class="fas fa-power-off" style="font-size: 25px; color: var(--dark-blue);"></i></span>
-                    <h4>CONTROL</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, qui.</p>
-                </div>
-                <div class="services">
-                    <span><i class="fas fa-image" style="font-size: 25px; color: var(--box-bg);"></i></span>
-                    <h4>IMAGE</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, qui.</p>
-                </div>
-                <div class="services">
-                    <span><i class="fas fa-video" style="font-size: 25px; color: var(--dark-blue);"></i></span>
-                    <h4>VIDEO</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, qui.</p>
-                </div>
-
-            </div>
-        </section>
-
-        <section id="about" class="about flex-box">
-            <h6>ABOUT</h6>
-            <div class="sub flex-box">
-                    <img src="./assets/img/about.jpg" alt="">
-                    <div class="sub__text">
-                    <h3>OUR PASSION FOR EXPERIENCE</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia minima illum cupiditate delectus ut dolor natus aspernatur veritatis. Quae ipsa dolores dignissimos ullam. Tempora eius, officia velit saepe recusandae maxime!</p>
-                    </div>
-            </div>
-        </section>
-
-
-        <section id="blog" class="blog flex-box">
-            <div class="blogpost">
-                <h4>Here's what we think</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-            </div>
-            <button class="btn">SHOW ME</button>
-        </section>
-
-        <footer id="footer">
-            <h3>Leave Us A Message...</h3>
-
-            <form action="./unknnown.php" method="post">
-            <label for="name">Name</label><br>
-            <input type="text" name="name" aria-label="hidden" required><br><br>
-            <label for="emaiil">Email Address</label required><br>
-            <input type="email" name="email" aria-label="hidden"><br><br>
-            <label for="Comment">Comments</label><br>
-            <textarea name="comments" required></textarea><br>
-            <input type="submit" value="Submit" class=".btn">
-        </form>
-        <hr>
-        <small>All Rights Reserved. &nbsp; Sarcon Technologies. &copy; 2020
-        </small>
-        </footer>
+         
+            <section id="home" class="home sect">
+                <main class="home__inner pad">
+                    <p>WE ARE SARCON TECH.</p>
+                    <h3>Award Winning <br> virtual & hybrid <br> events platform</h3>
+                    <button class="btn">Get Started</button>
+            </main>
+            </section>
+    
+         <div id="services" class="sect pad" style="display:none">
+             
+                <section class="service  flex-box" >
         
+                    <h6>SERVICES</h6>
+                    <h4>What We Offer...</h4>
+                    <hr>
+        
+                    <div class="service__list">
+                        <div class="services pad">
+                            <span><i class="fas fa-power-off" style="font-size: 25px; color: var(--dark-blue);"></i></span>
+                            <h4>CONTROL</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, qui.</p>
+                        </div>
+                        <div class="services">
+                            <span><i class="fas fa-image" style="font-size: 25px; color: var(--box-bg);"></i></span>
+                            <h4>IMAGE</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, qui.</p>
+                        </div>
+                        <div class="services">
+                            <span><i class="fas fa-video" style="font-size: 25px; color: var(--dark-blue);"></i></span>
+                            <h4>VIDEO</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, qui.</p>
+                        </div>
+        
+                    </div>
+                </section>
+         </div>
+         <div id="about" class="sect pad" style="display:none">
+             
+                <section id="about" class="about flex-box" >
+                    <h6>ABOUT</h6>
+                    <div class="sub flex-box">
+                            <img src="./assets/img/about.jpg" alt="">
+                            <div class="sub__text">
+                            <h3>OUR PASSION FOR EXPERIENCE</h3>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia minima illum cupiditate delectus ut dolor natus aspernatur veritatis. Quae ipsa dolores dignissimos ullam. Tempora eius, officia velit saepe recusandae maxime!</p>
+                            </div>
+                    </div>
+                </section>
+         </div>           
+         
+    
+         	<footer id="footer" class="sect pad" style="display:none">
+         	           <h3>Leave Us A Message...</h3>
+                 
+         	           <form action="./unknnown.php" method="post">
+         	           <label for="name">Name</label><br>
+         	           <input type="text" name="name" aria-label="hidden" required><br><br>
+         	           <label for="emaiil">Email Address</label required><br>
+         	           <input type="email" name="email" aria-label="hidden"><br><br>
+         	           <label for="Comment">Comments</label><br>
+         	           <textarea name="comments" required></textarea><br>
+         	           <input type="submit" value="Submit" class=".btn">
+         	       </form>
+         	       <hr>
+         	       <small>All Rights Reserved. &nbsp; Sarcon Technologies. &copy; 2020
+         	       </small>
+         	       </footer>
+</div> 
+
         <div class="container" id="container">
             <div class="contact" id="contact_chat">
                 <div class="contact__search">
@@ -172,9 +169,10 @@
                             <small>11:58pm</small>
                         </div>
                 	</div>
-                    
                 <div class="chat__input">
-                    <input type="text" placeholder="Type a message..." id="replied">
+                    <button id="alink"><i class="fas fa-link" style="color: #fff !important; font-size: 14px !important;"></i></button>
+                    <input type="url" placeholder="Enter A  link" id="link" style="display:none">
+                    <input type="text" placeholder="Type a message..."  id="replied">
                     <button id="send"><i class="fas fa-paper-plane" style="color: #fff !important; font-size: 14px !important;"></i></button>
                 </div>
             </div>

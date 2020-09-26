@@ -15,6 +15,10 @@
 }
 
 .pad {
+    padding: 3rem 1.5rem ;
+}
+
+.had {
     padding: .7rem 1rem ;
 }
 
@@ -274,7 +278,7 @@ footer {
         font-size: 15px !important;
     }
     .pad {
-        padding: .6rem 1rem !important;
+        padding: 2.5rem 1rem !important;
     }
     .home__inner  h3 {
             letter-spacing: 1px !important;
@@ -447,7 +451,7 @@ footer {
 
 @media only screen and (min-width: 768px) {
     .pad {
-        padding: .6rem 3rem ;
+        padding: 3rem 1.5rem ;
     }
     
     ul {

@@ -17,6 +17,10 @@
   color: #fff !important;
 }
 
+.block {
+  display: block !important;
+}
+
 body, input {
   font-family: 'Montserrat', sans-serif;
   color: var(--main--black);
@@ -53,6 +57,10 @@ body #btn:hover, input #btn:hover {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
+}
+
+.no-show {
+  display: none !important;
 }
 
 .container {
@@ -236,9 +244,14 @@ body #btn:hover, input #btn:hover {
       align-self: flex-end;
   margin: .5rem 1rem;
   border-radius: 10px;
-  width: 45%;
+  max-width: 45%;
   padding: .35rem 1rem;
   background: var(--main--blue);
+  word-wrap: break-word;
+}
+
+.container .chat__message .reply a {
+  color: #fff;
 }
 
 .container .chat__message small {
@@ -298,6 +311,9 @@ body #btn:hover, input #btn:hover {
 }
 
 @media only screen and (max-width: 768px) {
+  .no-show {
+    display: none !important;
+  }
   .contact {
     width: 0%;
     position: fixed;
@@ -360,7 +376,11 @@ body #btn:hover, input #btn:hover {
     width: 70% !important;
   }
   .chat__message .reply {
-    width: 70% !important;
+    max-width: 70% !important;
+    word-wrap: break-word;
+  }
+  .chat__message .reply a {
+    color: #fff;
   }
 }
 

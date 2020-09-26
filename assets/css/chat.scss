@@ -14,8 +14,11 @@
 
 .fas {
     color: #fff !important;
-
 }  
+
+.block {
+    display: block !important;
+}
 body, input {
     font-family: 'Montserrat', sans-serif;
     color: var(--main--black);
@@ -46,6 +49,9 @@ body, input {
 }
     .show {
         display: flex !important;
+    }
+    .no-show {
+        display: none !important;
     }
     .container {
         width: 100%;
@@ -200,9 +206,14 @@ body, input {
                     align-self:flex-end ;
                     margin: .5rem 1rem;
                     border-radius: 10px;
-                    width: 45%;
+                    max-width: 45%;
                     padding: .35rem 1rem;
                     background: var(--main--blue);
+                    word-wrap: break-word;
+                    
+                a {
+                    color: #fff;
+                }
                 }
 
                 small {
@@ -258,6 +269,9 @@ body, input {
         display: flex !important;
     }
     @media only screen and (max-width: 768px) {
+        .no-show {
+            display: none !important;
+        }
         .contact {
             width: 0%;
             position: fixed;
@@ -327,7 +341,12 @@ body, input {
                 width: 70% !important;
             }
             .reply {
-                width: 70% !important;
+                max-width: 70% !important;
+                word-wrap: break-word;
+
+                a {
+                    color: #fff;
+                }
             }
         }
         
