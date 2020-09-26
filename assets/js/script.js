@@ -129,7 +129,7 @@ class link {
   
    
       replyLink.textContent = chatText;
-      replyLink.href = "https://"+ linkk.value
+      replyLink.href = linkk.value
       replyLink.target = "_blank"
   
       let replyTime = document.createElement('small');
