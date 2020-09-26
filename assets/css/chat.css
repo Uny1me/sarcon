@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,900;1,700&display=swap');
+
 :root {
   --main--blue: #00C7E1;
   --main--black: rgba(102, 102, 102, 1);
@@ -22,7 +25,7 @@
 }
 
 body, input {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Raleway', sans-serif;
   color: var(--main--black);
 }
 
@@ -43,7 +46,7 @@ body #btn, input #btn {
   outline: none;
   cursor: pointer;
   border-radius: 2px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Raleway', sans-serif;
   color: var(--box--bg);
 }
 
